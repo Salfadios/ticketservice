@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-MTS::Application.config.secret_token = '5565a3493d72bedfd874520609dacb0463f82482df086b97c9636a734e640ccf638cde128cd58764062f7c5161c2d5a0a76f32f107125240cba0c027893893bc'
+TestApp::Application.config.secret_token = 'ad4e293c041d7c6c19726dd4e10884fbe98823072c7f21ce95c3d3babbe7d15bbd2b19863d2bfa41b5219465ad4866926eda7841671c228b795902132c7f99ac'

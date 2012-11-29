@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121128220308) do
+ActiveRecord::Schema.define(:version => 20121129203407) do
+
+  create_table "cats", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "doctors", :force => true do |t|
     t.string   "fio"
@@ -23,9 +29,56 @@ ActiveRecord::Schema.define(:version => 20121128220308) do
     t.datetime "updated_at",        :null => false
   end
 
+  create_table "specializations", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "ticket_statuses", :force => true do |t|
+    t.string   "name"
+    t.string   "desc"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tickets", :force => true do |t|
+    t.integer  "doctor_id"
+    t.integer  "user_id"
+    t.string   "datetime"
+    t.integer  "status_id"
+    t.integer  "duration"
+    t.string   "order_date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "fio"
+    t.string   "login"
+    t.integer  "status_id"
+    t.string   "password"
+    t.string   "last_login_date"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "users_statuses", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "working_times", :force => true do |t|
     t.string   "doctor_id"
     t.string   "integer"
+    t.string   "working_time_json_hash"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+  end
+
+  create_table "working_timetables", :force => true do |t|
+    t.integer  "doctor_id"
     t.string   "working_time_json_hash"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
