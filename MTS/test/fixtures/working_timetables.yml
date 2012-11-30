@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-one:
-  doctor_id: 1
-  working_time_json_hash: MyString
-
-two:
-  doctor_id: 1
-  working_time_json_hash: MyString

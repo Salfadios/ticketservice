@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  full_name: MyString
+  specialization_id: 1
+  time_limit: 1
+
+two:
+  full_name: MyString
+  specialization_id: 1
+  time_limit: 1
